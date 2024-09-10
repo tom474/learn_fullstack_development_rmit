@@ -1,7 +1,9 @@
-table, th, td {
-    border: 1px solid;
+table,
+th,
+td {
+	border: 1px solid;
 }
 
 label {
-    margin-right: 10px;
+	margin-right: 10px;
 }

@@ -20,14 +20,14 @@ export default function StudentTable({ students }) {
 	});
 
 	return (
-        <table>
-            <tr>
-                <td>ID</td>
-                <td>Name</td>
-                <td>GPA</td>
-                <td>Grade</td>
-            </tr>
-            {data}
-        </table>
+		<table>
+			<tr>
+				<td>ID</td>
+				<td>Name</td>
+				<td>GPA</td>
+				<td>Grade</td>
+			</tr>
+			{data}
+		</table>
 	);
 }
