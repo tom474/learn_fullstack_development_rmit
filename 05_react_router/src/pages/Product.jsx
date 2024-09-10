@@ -11,7 +11,11 @@ export default function Product() {
 	const product = useLoaderData();
 
 	if (product === null) {
-		return <h2 style={{ backgroundColor: `red` }}>The product you are looking for has been sold out</h2>;
+		return (
+			<>
+				<h2 style={{ backgroundColor: `red` }}>The product you looking for has been sold out</h2>
+			</>
+		);
 	}
 
 	return (
@@ -22,7 +26,7 @@ export default function Product() {
 					{product.name} - ${product.price}
 				</h2>
 				<p>{product.description}</p>
-				<p>Weight: {product.weight}</p>
+				<p>Weight: {product.weight}kg</p>
 			</div>
 		</>
 	);

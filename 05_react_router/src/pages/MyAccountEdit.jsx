@@ -3,8 +3,7 @@ import { getMyAccount, updateMyAccount } from "../api/myaccount";
 import { useLoaderData, Form, useNavigate, redirect } from "react-router-dom";
 
 export async function loadMyAccount() {
-	const myAccount = await getMyAccount();
-	return myAccount;
+	return await getMyAccount();
 }
 
 export async function saveMyAccount({ request }) {

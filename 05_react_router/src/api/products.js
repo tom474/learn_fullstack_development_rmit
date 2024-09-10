@@ -1,5 +1,3 @@
-// This script simulates products data processing tasks
-
 const products = [
 	{
 		id: 1,
@@ -45,9 +43,9 @@ const products = [
 	},
 ];
 
-// Get all products (id/name)
+// Get all products
 export async function getProducts() {
-	return new Promise((resolve) => {
+	return new Promise((resolve, reject) => {
 		const result = products.map((product) => {
 			return { id: product.id, name: product.name };
 		});
@@ -57,12 +55,12 @@ export async function getProducts() {
 
 // Get a specific product
 export async function getProduct(id) {
-	return new Promise((resolve) => {
+	return new Promise((resolve, reject) => {
 		let result = null;
 		setTimeout(() => {
-			for (let p of products) {
-				if (p.id === id) {
-					resolve(p);
+			for (const product of products) {
+				if (product.id === id) {
+					resolve(product);
 					return;
 				}
 			}

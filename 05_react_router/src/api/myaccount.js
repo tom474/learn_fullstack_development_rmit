@@ -1,5 +1,3 @@
-// This script simulates my account data processing tasks
-
 const myAccount = {
 	firstName: "Cuong",
 	lastName: "Tran",
@@ -8,14 +6,16 @@ const myAccount = {
 
 // Get my account
 export async function getMyAccount() {
-	return new Promise((resolve) => {
-		setTimeout(() => resolve(myAccount), 1000);
+	return new Promise((resolve, reject) => {
+		setTimeout(() => {
+			resolve(myAccount);
+		}, 1000);
 	});
 }
 
 // Update my account
 export async function updateMyAccount(newData) {
-	return new Promise((resolve) => {
+	return new Promise((resolve, reject) => {
 		setTimeout(() => {
 			myAccount.firstName = newData.firstName;
 			myAccount.lastName = newData.lastName;

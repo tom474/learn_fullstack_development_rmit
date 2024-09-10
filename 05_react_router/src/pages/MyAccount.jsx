@@ -4,7 +4,7 @@ import { Link, useLoaderData } from "react-router-dom";
 import { getMyAccount } from "../api/myaccount";
 
 export async function loadMyAccount() {
-	return getMyAccount();
+	return await getMyAccount();
 }
 
 export default function MyAccount() {
