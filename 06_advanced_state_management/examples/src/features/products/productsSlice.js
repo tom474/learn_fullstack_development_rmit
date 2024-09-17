@@ -15,14 +15,14 @@ const productsSlice = createSlice({
 	reducers: {
 		increase(state, action) {
 			const { id } = action.payload;
-			const product = state.find((p) => p.id === id);
+			const product = state.find((product) => product.id === id);
 			if (product) {
 				product.quantity++;
 			}
 		},
 		decrease(state, action) {
 			const { id } = action.payload;
-			const product = state.find((p) => p.id === id);
+			const product = state.find((product) => product.id === id);
 			if (product) {
 				product.quantity--;
 			}
@@ -31,15 +31,14 @@ const productsSlice = createSlice({
 	extraReducers(builder) {
 		builder
 			.addCase(fetchProducts.pending, (state, action) => {
-				console.log("pending.....");
+				console.log("Pending.....");
 			})
 			.addCase(fetchProducts.fulfilled, (state, action) => {
-				console.log("action", action);
+				console.log("Action: ", action);
 				state.push(...action.payload);
 			});
 	},
 });
 
 export const { increase, decrease } = productsSlice.actions;
-
 export default productsSlice.reducer;

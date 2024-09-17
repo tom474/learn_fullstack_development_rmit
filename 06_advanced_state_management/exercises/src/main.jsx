@@ -1,5 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { Provider } from "react-redux";
+import { store } from './app/store';
 import "./index.css";
 
 // Pages
@@ -8,13 +11,6 @@ import NotFound from "./pages/NotFound";
 import Products from "./pages/Products";
 import Product from "./pages/Product";
 import ProductIndex from "./pages/ProductIndex";
-
-// React Router
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
-
-// React Redux
-import { Provider } from "react-redux";
-import { store } from "./app/store";
 
 const router = createBrowserRouter([
 	{

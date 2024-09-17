@@ -15,9 +15,9 @@ export default function Products() {
 		}
 	}, [productStatus]);
 
-	const data = products.map((p) => (
-		<li key={p.id}>
-			<Link to={`${p.id}`}>{p.name}</Link>
+	const data = products.map((product) => (
+		<li key={product.id}>
+			<Link to={`${product.id}`}>{product.name}</Link>
 		</li>
 	));
 

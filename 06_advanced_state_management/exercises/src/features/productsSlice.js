@@ -33,14 +33,14 @@ const productsSlice = createSlice({
 	reducers: {
 		increaseQuantity(state, action) {
 			const { id } = action.payload;
-			const product = state.products.find((p) => p.id === id);
+			const product = state.products.find((product) => product.id === id);
 			if (product) {
 				product.quantity++;
 			}
 		},
 		decreaseQuantity(state, action) {
 			const { id } = action.payload;
-			const product = state.products.find((p) => p.id === id);
+			const product = state.products.find((product) => product.id === id);
 			if (product) {
 				product.quantity--;
 			}

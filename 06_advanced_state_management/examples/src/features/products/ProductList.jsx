@@ -6,9 +6,7 @@ import { useRef, useEffect } from "react";
 export default function ProductList() {
 	const dispatch = useDispatch();
 	const products = useSelector((state) => state.products);
-
-	let productList = products.map((p) => <Product key={p.id} info={p} />);
-
+	let productList = products.map((product) => <Product key={product.id} info={product} />);
 	const first = useRef(true);
 
 	useEffect(() => {
